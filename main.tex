@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%
+% Based on the CurVe CV class by LianTze Lim (liantze@gmail.com):
+%   https://www.overleaf.com/latex/templates/modern-cv-curve/twbphdtsmscx
+%
+% This public showcase repo adapts the template to demonstrate the
+% `tailor-resume` Claude Code skill. All persona content is fictional.
+%%%%%%%%%%%%%%%
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+% Default biblatex style used for the publication list is APA6. If you wish to
+% use a different style or pass other options to biblatex you can change them here.
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+% Most commands and style definitions are in settings.sty.
+\usepackage{settings}
+\makeatletter
+% CurVe does not define the standard description list environment that enumitem
+% expects, so provide the default LaTeX definition before loading enumitem.
+\@ifundefined{description}{%
+  \newenvironment{description}
+    {\list{}{\labelwidth\z@ \itemindent-\leftmargin
+             \let\makelabel\descriptionlabel}}
+    {\endlist}
+  \newcommand*{\descriptionlabel}[1]{\hspace\labelsep\normalfont\bfseries #1}
+}{}
+\makeatother
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{array} % after \usepackage{tikz}
+\graphicspath{{pictures/}}
+
+% If you need to further customise your biblatex setup e.g. with \DeclareFieldFormat etc please add them here AFTER loading settings.sty.
+\DefineBibliographyStrings{english}{url={\textsc{url}}}
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+
+%% Specify your last name(s) and first name(s) (as given in the .bib) to automatically bold your own name in the publications list.
+\mynames{Mercer/Jordan\bibnamedelima K.,}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+% \definecolor{SwishLineColour}{HTML}{00FFFF}
+% \definecolor{MarkerColour}{HTML}{0000CC}
+
+% Change the item prefix marker if you want
+% \prefixmarker{$\diamond$}
+
+%% Photo block is disabled by default for the public showcase (no real photo).
+%% US resumes generally omit photos for ATS compliance; EU/DE resumes may include one.
+%% To re-enable, swap the two lines below and drop a file at pictures/photo_1.{jpg,png}.
+\excludecomment{fullonly}
+% \includecomment{fullonly}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\leftheader{%
+  \begin{minipage}[t]{\linewidth}
+    {\namefont Jordan K. Mercer}\\[0.4em]
+    {\rolefont Senior Machine Learning Engineer \textbar{} PhD Candidate (CS)}\\[0.8em]
+{\summaryfont
+ML engineer with 8+ years building and deploying production ML systems, with
+a research track in large-scale retrieval and retrieval-augmented language
+models. Led distributed training infrastructure for billion-parameter models
+(9 days to 18 hours), shipped dense-retrieval systems serving 40M requests
+per month, and published first-author papers at NeurIPS and ICML.}
+  \end{minipage}%
+}
+\rightheader{}
+
+\begin{fullonly}
+\photo[r]{photo_1}
+\photoscale{0.20}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\makeheaders[c]
+
+% Contact line below the mission statement
+\vspace{0.5\baselineskip}
+\noindent
+\colorbox{gray!10}{%
+  \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+    \small
+    \setlength{\tabcolsep}{0pt}%
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llll}
+      \contactfield{\faEnvelope[regular]}{\href{mailto:jordan.mercer@example.com}{\texttt{jordan.mercer[at]example[dot]com}}} &
+      % \contactfield{\faMapMarker*}{San Francisco, USA} &
+      \contactfield{\faGithubSquare}{\href{https://github.com/jordan-k-mercer}{\texttt{github.com/jordan-k-mercer}}} &
+      \contactfield{\faLinkedin}{\href{https://www.linkedin.com/in/jordan-k-mercer/}{\texttt{linkedin.com/in/jordan-k-mercer}}}
+    \end{tabular*}
+  \end{minipage}%
+}
+
+\input{sections/employment}
+\makerubric{sections/education}
+\makerubric{sections/tech_skills}
+
+\input{sections/publications}
+
+\makerubric{sections/misc}
+
+\end{document}

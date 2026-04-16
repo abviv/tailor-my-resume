@@ -1,0 +1,53 @@
+% ---- Experience section (free-form, no CurVe rubric) ----
+\vskip\baselineskip
+\begin{tikzpicture}[baseline]
+  \shade[left color=SwishLineColour!60!white, right color=white]
+    rectangle (\dimexpr\textwidth-\hfuzz\relax, 2.5pt);
+  \node[font={\Large\bfseries\sffamily},
+        inner sep=0pt, text ragged,
+        anchor=south west, text depth=.5ex, text height=1.5ex]
+    at (1pt,2pt) {Experience};
+\end{tikzpicture}
+\vspace{2pt}
+
+% --- Senior ML Engineer ---
+\noindent
+\textbf{\sectionheadingFont{Senior Machine Learning Engineer}}
+\hfill
+\textit{Novalytic Inc., San Francisco}\\[2pt]
+\textit{2021 -- Present}
+\begin{itemize}[leftmargin=1.5em, topsep=4pt, itemsep=2pt]
+  \item Lead the large-language-model training platform: built a distributed PyTorch + FSDP training stack on Kubernetes that fine-tunes 7B--70B parameter models, taking a 13B model from a 9-day single-node run to 18 hours on a 32-GPU cluster.
+  \item Designed a retrieval-augmented generation service serving 40M requests/month with a P99 latency of 180\,ms, using vLLM for inference and a custom dense-retrieval backend with quantized embedding caches.
+  \item Drove the shift from ad-hoc experiment scripts to a reproducible MLOps pipeline (Weights \& Biases + DVC + Terraform), reducing experiment onboarding time for new hires from days to under an hour.
+  \item Published 2 first-author papers on retrieval and long-context reasoning (NeurIPS 2024, ICML 2023) while shipping the same research into production.
+  \item Mentored 4 ML engineers; led cross-team design reviews for model deployment, quantization, and inference efficiency.
+\end{itemize}
+
+\medskip
+
+% --- ML Research Engineer ---
+\noindent
+\textbf{\sectionheadingFont{Machine Learning Research Engineer}}
+\hfill
+\textit{Vertex Systems, Seattle}\\[2pt]
+\textit{2019 -- 2021}
+\begin{itemize}[leftmargin=1.5em, topsep=4pt, itemsep=2pt]
+  \item Built the company's first dense-retrieval search backend, replacing a BM25 baseline and improving top-10 recall by 22\% on enterprise document corpora.
+  \item Prototyped an early retrieval-augmented QA system (predating the RAG acronym) that grounded answers against indexed knowledge bases; shipped to 3 enterprise customers.
+  \item Designed and ran distributed training jobs on AWS (EKS + Spot instances), cutting monthly training spend by 35\% while preserving throughput.
+\end{itemize}
+
+\medskip
+
+% --- Software Engineer ---
+\noindent
+\textbf{\sectionheadingFont{Software Engineer}}
+\hfill
+\textit{Cascadia Labs, Portland}\\[2pt]
+\textit{2017 -- 2019}
+\begin{itemize}[leftmargin=1.5em, topsep=4pt, itemsep=2pt]
+  \item Built and maintained the backend data pipeline (Python + Airflow + Kafka) serving analytics for a SaaS product with 200k monthly active users.
+  \item Implemented the company's first ML feature: a recommendation ranker that improved click-through rate by 11\% in an online A/B test.
+  \item Wrote the internal CI/CD bootstrap for service deployments (Docker + Terraform), adopted by 3 downstream teams.
+\end{itemize}
