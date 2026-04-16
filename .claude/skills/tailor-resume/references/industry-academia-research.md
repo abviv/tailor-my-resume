@@ -5,15 +5,18 @@ Applies to: PhD program applications, postdoc applications, tenure-track faculty
 Academic documents are **CVs, not résumés**. The rules of concision do not apply — completeness and verifiability do.
 
 ## CV vs. résumé decision
+
 - **PhD / postdoc / faculty / grant applications**: CV (unlimited length; 3–15 pages typical).
 - **Research scientist at an industry lab**: CV or résumé — the job posting will usually specify. If it says "CV", produce a CV; if "résumé", produce an industry-style 2-pager per the tech industry reference.
 
 ## Length
+
 - Early-career (new PhD): 3–5 pages
 - Mid-career postdoc: 5–8 pages
 - Faculty / senior research: 10–30+ pages — no cap, but structure matters more
 
 ## Section order (CV)
+
 1. Header (full name, affiliation, email, ORCID, personal site, Google Scholar link)
 2. Education (with advisor name and thesis title)
 3. Academic / Research Positions
@@ -105,6 +108,7 @@ Three references for junior applications; five for faculty search. Include: name
 Confirm with each referee **before** listing. Do not invent or list without permission.
 
 ## What NOT to do
+
 - Do not cut content to force one or two pages — a CV is supposed to be complete.
 - Do not inflate preprints to count as peer-reviewed publications.
 - Do not hide a failed / withdrawn paper by restyling it as a "tech report" — if it's tech-report-quality, cite the tech-report number.

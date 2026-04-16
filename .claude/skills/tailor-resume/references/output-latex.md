@@ -35,6 +35,7 @@ Links: `\href{https://example.com}{display text}`. Ensure `hyperref` is loaded (
 ## Build rules
 
 Prefer the project's own build command:
+
 1. `./build.sh` (if Docker preferred by project)
 2. `make` or `make compile`
 3. `latexmk -pdf main.tex`
@@ -42,6 +43,7 @@ Prefer the project's own build command:
 5. Fallback: `pdflatex → biber → pdflatex → pdflatex` (if biblatex is used)
 
 If the build fails, read the log. Common failures:
+
 - Unescaped `%`, `&`, `#`, `_` in new content
 - Missing closing braces `}`
 - biblatex key mismatch — verify the `\nocite{...}` keys exist in the `.bib`
@@ -60,6 +62,7 @@ Do **not** paper over errors by wrapping content in `\iffalse ... \fi`. Fix the 
 ## Header / summary
 
 Different templates put the summary in different places:
+
 - `curve` class: summary is set in `\leftheader{{\summaryfont ...}}` in `main.tex`
 - `moderncv`: `\cvitem{Profile}{...}` or similar
 - `awesome-cv`: `\cvinfo{...}` or `\cvbio{...}`
@@ -102,6 +105,7 @@ When unsure, grep for a string in the current summary text and edit in place.
 ## Page-budget enforcement
 
 If the PDF overshoots the industry's page budget:
+
 1. **First**: cut low-relevance bullets. Do not resize fonts or margins.
 2. **Second**: merge very old / short roles into a "Earlier Experience" one-liner.
 3. **Third**: drop a section entirely if it's low-signal for the target role.
@@ -114,8 +118,10 @@ Leave these alone unless the user asks. CV templates are opinionated by design; 
 ## Output naming
 
 After a successful build:
+
 ```bash
 mkdir -p output
 cp output/resume.pdf "output/<company-slug>_$(date +%Y-%m-%d).pdf"
 ```
+
 Keep `output/resume.pdf` as the "current" artifact.

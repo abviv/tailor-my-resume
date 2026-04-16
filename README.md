@@ -39,6 +39,7 @@ The repo ships with a fictional persona — **Jordan K. Mercer**, a senior ML en
 ## ⚡ Quick start
 
 ### 🧰 Requirements
+
 - 🐳 **Docker** (recommended), or a local `pdflatex` + `biber` installation.
 - 🤖 **[Claude Code](https://claude.com/claude-code)** for the tailoring workflow.
 
@@ -52,6 +53,7 @@ open output/resume.pdf
 ```
 
 Or without Docker:
+
 ```bash
 make compile
 ```

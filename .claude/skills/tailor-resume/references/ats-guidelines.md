@@ -48,6 +48,7 @@ Or use the full term on first mention and abbreviate afterwards.
 - Export PDFs as "standard" text-based PDF, not as image or PDF/A if you can avoid it.
 
 ## LinkedIn alignment
+
 If the ATS auto-pulls from LinkedIn (e.g., "Apply with LinkedIn"), keep titles, companies, and dates **identical** between the two. Mismatches flag recruiter attention — unhelpful for the wrong reasons.
 
 ## When the ATS is known
