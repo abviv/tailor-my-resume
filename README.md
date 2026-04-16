@@ -9,7 +9,6 @@ It revolves around resume_mem.md, which acts as the ultimate master file of your
 
 When you're ready, just invoke the /tailor-resume command. Claude will take your comprehensive resume_mem.md file and the specific job link you provide to generate a customized, highly ATS-compatible resume tailored perfectly for that role. I can't guarantee you a job, but knowing this tool helped you get hired is all the reward I need. Good luck with your hunting :)
 
-
 ## Clone the repo, open it in Claude Code, and run:
 
 ```
