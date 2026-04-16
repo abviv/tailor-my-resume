@@ -1,4 +1,5 @@
 # Tailor My Resume
+
 A LaTeX resume system powered by the **`tailor-resume`** Claude Code skill.
 
 ## Personal Note
