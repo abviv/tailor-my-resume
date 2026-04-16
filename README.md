@@ -6,7 +6,7 @@
 
 While actively applying for jobs, I realized that sending the same resume to multiple positions—even highly relevant ones—just wasn't getting past the ATS filters. That frustration led me to invent this customization process.
 
-It revolves around resume_mem.md, which acts as the ultimate master file of your career. At the root of the repo, it's just a template, but you should fill it with every single professional detail about yourself. Don't hold back or filter anything; include every nitty-gritty accomplishment.
+It revolves around `resume_mem.md` (it's more like a memory file which contains your entire professional life), which acts as the ultimate master file of your career. At the root of the repo, it's just a template, but you should fill it with every single professional detail about yourself. Don't hold back or filter anything; include every nitty-gritty accomplishment.
 
 When you're ready, just invoke the /tailor-resume command. Claude will take your comprehensive resume_mem.md file and the specific job link you provide to generate a customized, highly ATS-compatible resume tailored perfectly for that role. I can't guarantee you a job, but knowing this tool helped you get hired is all the reward I need. Good luck with your hunting :)
 
